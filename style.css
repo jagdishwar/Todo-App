@@ -1,0 +1,94 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#todos {
+  border: 3px solid rgba(57, 129, 169, 1);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+#todos > h1 {
+  margin: 0;
+  padding: 10px 20px;
+  border-bottom: 1px solid black;
+}
+
+#todoList {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#todoList li {
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  margin: 0;
+  border-bottom: 1px solid #ddd;
+  background-color: rgba(114, 158, 234, 0.1);
+  transition: background-color 0.3s;
+}
+
+#todoList li:nth-child(even) {
+  background-color: rgba(114, 158, 234, 0.2);
+}
+
+#todoList li .taskCheckbox {
+  margin-right: 10px;
+}
+
+.addTodo {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addTodo > input[type=text] {
+  flex: 1;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-size: 1em;
+  border-bottom: 2px solid rgb(162, 166, 173);
+  transition: border-bottom 0.5s;
+}
+
+.addTodo input[type=text]:focus {
+  border-bottom: 2px solid rgb(114, 158, 234);
+}
+
+.addTodo > button {
+  background-color: rgb(114, 158, 234);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  background-color: #c62828;
+}
+
+.checked > label {
+  text-decoration: line-through;
+}
+
+.dragging {
+  opacity: 0.5;
+}
